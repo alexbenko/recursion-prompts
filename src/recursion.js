@@ -95,11 +95,30 @@ var isEven = function(n) {
 // sumBelow(10); // 45
 // sumBelow(7); // 21
 var sumBelow = function(n) {
+  //base case
+  if(n === 0){
+    return 0
+  }else if(n < 0){ //if n is negative
+    return sumBelow(-n); // make it negative and give it back to sumBelow
+  }else if(n-2 < 1){ //if n is 0 or negative
+    return n - 1; //subtract 1 from n
+  }else if(n > 1 && (n-2) > -1){
+    return (n -1) + sumBelow(n-1);
+  }
+
+
 };
 
 // 6. Get the integers within a range (x, y).
 // range(2,9); // [3,4,5,6,7,8]
 var range = function(x, y) {
+  if( y - x === 0){//if they are the same
+    return [];
+  }
+
+  if(y = x - 1){ //if there is a difference of 1 ie 10,11
+    return [];
+  }
 };
 
 // 7. Compute the exponent of a number.
