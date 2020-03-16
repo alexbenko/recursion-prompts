@@ -112,13 +112,7 @@ var sumBelow = function(n) {
 // 6. Get the integers within a range (x, y).
 // range(2,9); // [3,4,5,6,7,8]
 var range = function(x, y) {
-  if( y - x === 0){//if they are the same
-    return [];
-  }
 
-  if(y = x - 1){ //if there is a difference of 1 ie 10,11
-    return [];
-  }
 };
 
 // 7. Compute the exponent of a number.
@@ -138,6 +132,17 @@ var powerOfTwo = function(n) {
 
 // 9. Write a function that reverses a string.
 var reverse = function(string) {
+
+  if(string === ''){
+    return '';
+  }else {
+    return reverse(string.substring(1)) + string.charAt(0);
+  }
+
+ //for(var i = string.length -1;  i >= 0; i--){
+   // reversed.push(string[i]);
+  //}
+
 };
 
 // 10. Write a function that determines if a string is a palindrome.
